@@ -1,0 +1,12 @@
+﻿<link href="~/css/main.css" rel="stylesheet" />
+<br />
+<div class="row" style="margin:10px">
+
+    <div class="col-md-6">
+            @Html.AsyncPartial("test1","home", "getdata", "?id=1")
+        </div>
+        <div class="col-md-6">
+            @Html.AsyncPartial("test2","home", "getdata", "?id=2&name=test")
+        </div>
+</div>
+<script>@Html.Raw(TempData["script"])</script>

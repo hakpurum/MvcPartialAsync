@@ -1,0 +1,32 @@
+﻿@model MvcPartialAsync.Models.UserModel
+<div class="panel panel-primary" style="width:100%">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-sm-11"><h3 class="panel-title">Test</h3></div>
+            <div class="col-sm-1">
+                <a data-partial-refresh href="javascript:;"><span style="color:white" class="glyphicon glyphicon-refresh"></span></a>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="panel-body">
+        <table style="width:100%" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>UserId</th>
+                    <th>UserName</th>
+                    <th style="text-align: right">CreateDate</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.Users)
+            {
+                <tr>
+                    <td>@item.UserId</td>
+                    <td style="text-align :right">@item.UserName</td>
+                    <td style="text-align :right">@item.CreateDate</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
